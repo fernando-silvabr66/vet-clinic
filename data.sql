@@ -6,7 +6,7 @@ VALUES
 	('Pikachu', '2021-01-07', 1, FALSE, 15.4 ),
 	('Devimon', '2017-05-12', 5, TRUE, 11);
 
-	INSERT INTO animals (name,  date_of_birth, weight_kg, neutered, escape_attempts)
+INSERT INTO animals (name,  date_of_birth, weight_kg, neutered, escape_attempts)
 VALUES
 
 	('Charmander', '2020-02-08', -11, FALSE, 0),
@@ -16,3 +16,8 @@ VALUES
 	('Boarmon', '2005-06-07', 20.4, TRUE, 7),
 	('Blossom', '1998-10-13', 17, TRUE, 3),
 	('Ditto', '2022-05-14', 22, TRUE, 4);
+
+BEGIN;
+UPDATE animals SET species = 'unspecified';
+SELECT * from animals;
+ROLLBACK;
