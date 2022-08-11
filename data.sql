@@ -118,3 +118,25 @@ INSERT INTO vets (
 ) VALUES (
     'Jack Harkness', 38, '2008-06-08'
 );
+
+-- Insert specializations into specializations table
+
+INSERT INTO specializations (
+    vet_id, specie_id
+) SELECT v.id, s.id
+    FROM species s
+    INNER JOIN vets v ON v.name = 'William Tatcher' AND s.name = 'Pokemon';
+
+INSERT INTO specializations (
+    vet_id, specie_id
+) SELECT v.id, s.id
+    FROM species s
+    INNER JOIN vets v ON v.name = 'Stephanie Mendez' AND s.name IN ('Digimon', 'Pokemon');
+
+INSERT INTO specializations (
+    vet_id, specie_id
+) SELECT v.id, s.id
+    FROM species s
+    INNER JOIN vets v ON v.name = 'Jack Harkness' AND s.name = 'Digimon';
+
+	
