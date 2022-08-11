@@ -50,3 +50,12 @@ CREATE TABLE specializations  (
     specie_id INT,
     PRIMARY KEY (id)
 );
+
+-- Create visits table
+CREATE TABLE visits  (
+    id SERIAL NOT NULL,
+    animal_id INT,
+    vet_id INT,
+    visit DATE,
+    PRIMARY KEY (id)
+);
