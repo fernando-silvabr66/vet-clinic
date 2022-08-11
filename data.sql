@@ -17,7 +17,78 @@ VALUES
 	('Blossom', '1998-10-13', 17, TRUE, 3),
 	('Ditto', '2022-05-14', 22, TRUE, 4);
 
-BEGIN;
-UPDATE animals SET species = 'unspecified';
-SELECT * from animals;
-ROLLBACK;
+
+-- Insert Owners into the Owners table - line by line
+
+INSERT INTO owners (
+    full_name, age
+) VALUES (
+    'Sam Smith', 34
+);
+
+INSERT INTO owners (
+    full_name, age
+) VALUES (
+    'Jennifer Orwell', 19
+);
+
+INSERT INTO owners (
+    full_name, age
+) VALUES (
+    'Bob', 45
+);
+
+INSERT INTO owners (
+    full_name, age
+) VALUES (
+    'Melody Pond', 77
+);
+
+INSERT INTO owners (
+    full_name, age
+) VALUES (
+    'Dean Winchester', 14
+);
+
+INSERT INTO owners (
+    full_name, age
+) VALUES (
+    'Jodie Whittaker', 38
+);
+
+-- Insert species into species table
+
+INSERT INTO species (name) VALUES ('Pokemon');
+INSERT INTO species (name) VALUES ('Digimon');
+
+-- Update species id into animals table
+
+UPDATE animals
+	SET species_id=(SELECT id from species WHERE name = 'Digimon')
+	WHERE name LIKE '%mon';
+
+UPDATE animals
+	SET species_id=(SELECT id from species WHERE name = 'Pokemon')
+	WHERE name NOT LIKE '%mon'; 
+
+-- Update Owners id into animals table
+
+UPDATE animals
+	SET owner_id=1
+	WHERE name = 'Agumon';
+
+UPDATE animals
+	SET owner_id=2
+	WHERE name IN ('Gabumon', 'Pikachu');
+
+UPDATE animals
+	SET owner_id=3
+	WHERE name IN ('Devimon', 'Plantmon');
+
+UPDATE animals
+	SET owner_id=4
+	WHERE name IN ('Charmander', 'Squirtle', 'Blossom');
+
+UPDATE animals
+	SET owner_id=5
+	WHERE name IN ('Angemon', 'Boarmon');
