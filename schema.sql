@@ -21,3 +21,15 @@ CREATE TABLE owners (
 CREATE TABLE species (
 	id SERIAL PRIMARY KEY, 
 	name VARCHAR);
+
+ALTER TABLE animals 
+	ADD owner_id INT;
+
+ALTER TABLE animals 
+  DROP COLUMN species;
+
+ALTER TABLE animals
+  ADD COLUMN species_id INT REFERENCES species(id);
+
+ALTER TABLE animals
+  ADD COLUMN owner_id INT REFERENCES owners(id);
