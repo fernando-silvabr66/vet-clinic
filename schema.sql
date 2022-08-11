@@ -33,3 +33,12 @@ ALTER TABLE animals
 
 ALTER TABLE animals
   ADD COLUMN owner_id INT REFERENCES owners(id);
+
+-- Create Vets table
+CREATE TABLE vets (
+    id SERIAL NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    age SMALLINT,
+    date_of_graduation DATE,
+    PRIMARY KEY (id)
+);
