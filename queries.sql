@@ -134,7 +134,6 @@ SELECT
     LIMIT 1;
 
 -- Day-4 Work
-
 -- 1-Who was the last animal seen by William Tatcher?
 SELECT
 	a.name, v.visit
@@ -151,7 +150,6 @@ SELECT
     FROM visits v
     JOIN vets e ON v.vet_id = e.id
     WHERE e.name = 'Stephanie Mendez';
-
 
 -- 3-List all vets and their specialties, including vets with no specialties.
 SELECT
