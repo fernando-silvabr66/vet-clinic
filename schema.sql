@@ -56,6 +56,6 @@ CREATE TABLE visits  (
     id SERIAL NOT NULL,
     animal_id INT,
     vet_id INT,
-    visit DATE,
+    date_of_visit DATE,
     PRIMARY KEY (id)
 );
