@@ -13,13 +13,19 @@ This repository includes files with plain SQL that can be used to recreate a dat
 **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
 
 
-## Author
+## Authors
 
 👤 **Fernando César da Silva**
 
 - GitHub: [@fernando-silvabr66](https://github.com/fernando-silvabr66)
 - Twitter: [@fsilvabr1](https://twitter.com/fsilvabr1)
 - LinkedIn: [https://linkedin.com/in/fernando-silvabr66](https://linkedin.com/in/fernando-silvabr66)   
+
+👤 **Jesús Alfonso Vázquez Barragán**
+
+- GitHub: [@jevazquezb](https://github.com/jevazquezb)
+- Twitter: [@javb_1187](https://twitter.com/javb_1187)
+- LinkedIn: [https://www.linkedin.com/in/jevazquezb](https://www.linkedin.com/in/jevazquezb) 
 
 ## 🤝 Contributing
 
