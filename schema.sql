@@ -62,3 +62,9 @@ CREATE TABLE visits  (
 
 -- Add index "animal_id" to visits table
 CREATE INDEX visits_idx_animal_id ON "visits" ("animal_id");
+
+-- Add index "vet_id" to visits table
+CREATE INDEX visits_idx_vet_id ON "visits" ("vet_id");
+
+-- Add index "email" to owners table
+CREATE INDEX owner_idx_email ON "owners" ("email"); 
