@@ -59,3 +59,15 @@ CREATE TABLE visits  (
     date_of_visit DATE,
     PRIMARY KEY (id)
 );
+
+-- Add index "animal_id" to visits table
+CREATE INDEX visits_idx_animal_id ON "visits" ("animal_id");
+
+
+CREATE INDEX visits_idx_vet_id ON "visits" ("vet_id");
+
+
+CREATE INDEX owner_idx_email ON "owners" ("email");
+
+
+
